@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 for n in range(0, 99):
-    print("{:d} = {:#X}".format(n, n))
+    print("{:d} = {:#x}".format(n, n))
