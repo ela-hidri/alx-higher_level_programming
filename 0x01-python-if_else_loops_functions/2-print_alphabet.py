@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 for n in range(ord('a'), ord("z")+1):
-    print(chr(n).lower(), end="")
+    print("{:s}".format(chr(n).lower()), end="")
