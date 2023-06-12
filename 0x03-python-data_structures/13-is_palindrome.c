@@ -39,12 +39,12 @@ int is_palindrome(listint_t **head)
 		list = list->next;
 		l++;
 	}
-	if (l % 2 != 0)
-		return (0);
 	list = *head;
-	for (i = 0; i < l / 2; i++)
+	for (i = 0; i < (l / 2) - 1; i++)
 		list = list->next;
+	list = list->next;
 	rev = reverse(&list);
+	list = *head;
 	while (rev)
 	{
 		if (rev->n != list->n)
