@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def square(val):
     return val * val
 
