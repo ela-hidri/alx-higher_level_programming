@@ -5,7 +5,7 @@
 
 class Square:
     """define size with condition and calc area """
-    def __init__(self, size):
+    def __init__(self, size=0):
         """ initialize attribute """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
