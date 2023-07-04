@@ -1,0 +1,51 @@
+The ``0-add_integer`` module
+===============================
+
+Using ``add_integer``
+---------------------
+
+this is an example test in reStructuredText format
+First import ``add_integer`` from the ``0-add_integer.py`` module:
+
+	>>> add = __import__("0-add_integer").add_integer
+	
+use it:
+	>>> add(None)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+	>>> add("hi")
+	Traceback (most recent call last):
+        ...
+        TypeError: a must be an integer
+
+	>> add(1, "t")
+	Traceback (most recent call last):
+        ...
+        TypeError: b must be an integer
+
+	>>> add(2)
+	100
+
+	>>> add(55, -5)
+	50
+
+	>>> add(1256, 2.3)
+	1258
+
+	>>> add(5, -7)
+	-2
+	
+	>>> add(2.3, 5.8)
+	7
+	
+	>>> add(float('inf'), 1)
+	Traceback (most recent call last):
+        ...
+	OverflowError: cannot convert float infinity to integer
+
+	>>> add(float('NaN'))
+	Traceback (most recent call last):
+        ...
+	ValueError: cannot convert float NaN to integer
