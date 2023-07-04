@@ -1,0 +1,50 @@
+The ``2-matrix_divided`` module
+===============================
+
+Using ``matrix_divided``
+---------------------
+
+this is an example test in reStructuredText format
+First import ``matrix_divided`` from the ``2-matrix_divided.py`` module:
+	>>> matdiv = __import__("2-matrix_divided").matrix_divided
+
+	>>> matdiv("lo", 4)
+	Traceback (most recent call last):
+	...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+	>>> matdiv(None, 8)
+	Traceback (most recent call last):
+        ...
+        TypeError: matrix must be a matrix (list of lists) of integers/floats
+	
+	>>> matdiv(None, 5)
+        Traceback (most recent call last):
+        ...
+        TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+	>>> matdiv([[1, 2, 3],[4, 5, 6]], 3)
+	[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+	>>> matdiv([[1, 1],[1, 1]], 2)
+	[[0.5, 0.5], [0.5, 0.5]]
+
+	>>> matdiv([[1, 2, 3],[1, 2],[1, 2, 3]], 5)
+	Traceback (most recent call last):
+        ...
+	TypeError: Each row of the matrix must have the same size
+
+	>>> matdiv([[1, 1],[1, "l"]], 5)
+	Traceback (most recent call last):
+        ...
+        TypeError: matrix must be a matrix (list of lists) of integers/floats
+	
+	>>> matdiv([[1, 1],[1, 1]], 0)
+	Traceback (most recent call last):
+        ...
+	ZeroDivisionError: division by zero
+	
+	>>> matdiv([[1, 1],[1, 1]], "l")
+	Traceback (most recent call last):
+        ...
+        TypeError: div must be a number

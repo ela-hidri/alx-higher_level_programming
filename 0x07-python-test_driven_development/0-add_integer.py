@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-#0-add_integer
-""" defines an addition function 
-    
+# 0-add_integer
+""" defines an addition function
+
     function that adds 2 integers
 """
 
