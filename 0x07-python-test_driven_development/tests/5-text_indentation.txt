@@ -1,0 +1,44 @@
+The ``5-text_indentation`` module
+===============================
+
+Using ``text_indentation``
+---------------------
+
+this is an example test in reStructuredText format
+First import ``text_indentation`` from the ``5-text_indentation`` module:
+
+	>>> text = __import__("5-text_indentation").text_indentation
+
+	>>> text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere?")
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+	<BLANKLINE>
+	Quonam modo?
+	<BLANKLINE>
+	Utrum igitur tibi litteram videor an totas paginas commovere?
+	<BLANKLINE>
+
+	>>> text("")
+	
+	
+	>>> text(52684)
+	Traceback (most recent call last):
+	...
+	TypeError: text must be a string
+
+	>>> text(".?:")
+	.
+	<BLANKLINE>
+	?
+	<BLANKLINE>
+	:
+	<BLANKLINE>
+
+	>>> text(":hi")
+	:
+	<BLANKLINE>
+	hi
+
+	>>> text("Hool: hi")
+	Hool:
+	<BLANKLINE>
+	hi
