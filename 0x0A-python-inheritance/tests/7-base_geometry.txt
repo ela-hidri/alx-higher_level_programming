@@ -8,10 +8,27 @@
 	...
 	ValueError: my_int must be greater than 0
 	
-	bg.integer_validator("my_int", "mm")
+	>>> bg.integer_validator("my_int", "mm")
 	Traceback (most recent call last):
         ...
 	TypeError: my_int must be an integer
 
-	bg..integer_validator("my_int", 152)
+	>>> bg.integer_validator("my_int", 152)
 	
+	>>> type(bg)
+	<class '7-base_geometry.BaseGeometry'>
+
+	>>> bg.integer_validator("my_int", True)
+        Traceback (most recent call last):
+        ...
+        TypeError: my_int must be an integer
+
+	>>> bg.integer_validator("my_int", [1, 2, 3])
+        Traceback (most recent call last):
+        ...
+        TypeError: my_int must be an integer
+	
+	>>> print(bg.area())
+	Traceback (most recent call last):
+        ...
+	Exception: area() is not implemented
