@@ -1,0 +1,26 @@
+The ``1-my_list`` module
+===============================
+
+Using ``print_sorted``
+---------------------
+
+this is an example test in reStructuredText format
+First import ``my_list`` from the``1-my_list`` module:
+
+        >>> myList = __import__('1-my_list').MyList
+
+        >>> mylist = myList()
+        >>> mylist.print_sorted()
+        []
+
+        >>> mylist = myList([8, 2, 6])
+	>>> mylist.print_sorted()
+        [2, 6, 8]
+
+        >>> mylist = myList([8])
+	>>> mylist.print_sorted()
+        [8]
+
+        >>> mylist = myList([8, 5])
+	>>> mylist.print_sorted()
+        [5, 8]
