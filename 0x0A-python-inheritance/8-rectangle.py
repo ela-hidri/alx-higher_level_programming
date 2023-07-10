@@ -13,6 +13,13 @@ class Rectangle(BaseGeometry):
     def __init__(self, width, height):
         """
         initialise var
+
+        Args:
+            self: class
+            Width: width of rectangle
+            height: height of rectangle
+        Return:
+            nothing
         """
         self.integer_validator("width", width)
         self.__width = width
