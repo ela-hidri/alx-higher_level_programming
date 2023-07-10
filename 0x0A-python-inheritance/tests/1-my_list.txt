@@ -24,3 +24,10 @@ First import ``my_list`` from the``1-my_list`` module:
         >>> mylist = myList([8, 5])
 	>>> mylist.print_sorted()
         [5, 8]
+
+	>>> type(mylist)
+	<class '1-my_list.MyList'>
+
+	>>> mylist.append(8)
+	>>>mylist.print_sorted()
+	[5, 8, 8]
