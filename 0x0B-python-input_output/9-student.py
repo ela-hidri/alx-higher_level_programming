@@ -1,23 +1,20 @@
 #!/usr/bin/python3
 """
-define class
+defien clss Student
 """
 
 
 class Student:
     """
-    define student
+    define class student with requirement
     """
+
     def __init__(self, first_name, last_name, age):
-        """
-        initialize var
-        """
-        self.first_name = first_name
+        """ init """
         self.last_name = last_name
+        self.first_name = first_name
         self.age = age
-        
+
     def to_json(self):
-        """
-        retrieves a dictionary representation
-        """
-        return self.__dict___
+        """ serilize """
+        return self.__dict__
