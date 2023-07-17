@@ -27,3 +27,6 @@ class TestSquare(unittest.TestCase):
     def test_area(self):
         s2 = Square(1)
         self.assertEqual(s2.area(), 1)
+
+    def test_inst_Base(self):
+        self.assertIsInstance(Square(1), Base)
