@@ -109,18 +109,24 @@ class Rectangle(Base):
         string += str(self.width) + "/" + str(self.height)
         return string
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ assigns an argument to each attribute: """
-        n = 0
-        for arg in args:
-            if n == 0:
-                self.id = args[0]
-            elif n == 1:
-                self.width = args[1]
-            elif n == 2:
-                self.height = args[2]
-            elif n == 3:
-                self.x = args[3]
-            elif n == 4:
-                self.y = args[4]
-            n += 1
+        if args is not None and len(args) != 0:
+            n = 0
+            for arg in args:
+                if n == 0:
+                    self.id = args[0]
+                elif n == 1:
+                    self.width = args[1]
+                elif n == 2:
+                    self.height = args[2]
+                elif n == 3:
+                    self.x = args[3]
+                elif n == 4:
+                    self.y = args[4]
+                n += 1
+            return
+        if kwargs is not None:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+
