@@ -105,4 +105,4 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r2.area(), 20)
 
     if __name__ == '__main__':
-    unittest.main()
+        unittest.main()

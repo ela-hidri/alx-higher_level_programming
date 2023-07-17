@@ -8,7 +8,7 @@ from models.rectangle import Rectangle
 from models.square import Square
 
 
-class TestSquare(Tunittest.estCase):
+class TestSquare(unittest.TestCase):
     """ 
     testing square class
     """
@@ -38,4 +38,4 @@ class TestSquare(Tunittest.estCase):
         self.assertIsInstance(Square(1), Base)
 
     if __name__ == '__main__':
-    unittest.main()
+        unittest.main()
