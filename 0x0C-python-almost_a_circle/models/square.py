@@ -35,5 +35,24 @@ class Square(Rectangle):
         string = "[" + str(self.__class__.__name__) + "] "
         string += "(" + str(self.id) + ") "
         string += str(self.x) + "/" + str(self.y) + " - "
-        string += str(self.size) 
+        string += str(self.size)
         return string
+
+    def update(self, *args, **kwargs):
+        """ assigns an argument to each attribute: """
+        if args is not None and len(args) != 0:
+            n = 0
+            for arg in args:
+                if n == 0:
+                    self.id = args[0]
+                elif n == 1:
+                    self.size = args[1]
+                elif n == 2:
+                    self.x = args[2]
+                elif n == 3:
+                    self.y = args[3]
+                n += 1
+            return
+        if kwargs is not None:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
