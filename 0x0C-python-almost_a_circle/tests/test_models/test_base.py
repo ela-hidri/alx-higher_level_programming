@@ -1,10 +1,10 @@
-import unittest
+#!/usr/bin/python3
 """
 Define unittest for base.py
 """
-
-
+import unittest
 from models.base import Base
+
 class TestBase(unittest.TestCase):
     """
     testing base class

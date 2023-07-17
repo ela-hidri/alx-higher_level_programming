@@ -1,14 +1,14 @@
-import unittest
+#!/usr/bin/python3
 """
 Define unittest for square.py
 """
-
-
+import unittest
 from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
 
-class TestSquare(unittest.TestCase):
+
+class TestSquare(Tunittest.estCase):
     """ 
     testing square class
     """

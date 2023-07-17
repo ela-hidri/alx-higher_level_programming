@@ -1,11 +1,12 @@
-import unittest
+#!/usr/bin/python3
 """
 Define unittest for rectangle.py
 """
-
-
+import unittest
 from models.base import Base
 from models.rectangle import Rectangle
+
+
 class TestRectangle(unittest.TestCase):
     """ 
     testing rectangle claee
