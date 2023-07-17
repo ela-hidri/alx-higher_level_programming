@@ -6,7 +6,9 @@ Define unittest for base.py
 
 from models.base import Base
 class TestBase(unittest.TestCase):
-
+    """
+    testing base class
+    """
     def test_no_arg(self):
         """ test with no arg """
         bn = Base()

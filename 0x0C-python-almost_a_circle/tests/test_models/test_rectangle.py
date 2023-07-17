@@ -7,7 +7,9 @@ Define unittest for rectangle.py
 from models.base import Base
 from models.rectangle import Rectangle
 class TestRectangle(unittest.TestCase):
-
+    """ 
+    testing rectangle claee
+    """
     def test_no_arg(self):
         """ test with ni arg """
         with self.assertRaises(TypeError):
@@ -48,44 +50,58 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r2.id, 10)
 
     def test_six_arg(self):
+        """ test if arg is str """
         with self.assertRaises(TypeError):
             Rectangle(1, 8, 1, 1, 5, 5)
 
     def test_arg_width_str(self):
+        """ if width is str """
         with self.assertRaises(TypeError):
             Rectangle("s", 8, 1)
 
     def test_arg_height_str(self):
+        """ if height str """
         with self.assertRaises(TypeError):
             Rectangle(2, "s", 1)
 
     def test_arg_x_str(self):
+        """ if x str """
         with self.assertRaises(TypeError):
             Rectangle(2, 8, "l")
 
     def test_arg_y_str(self):
+        """ if y is str """
         with self.assertRaises(TypeError):
             Rectangle(8, 8, 1, "u")
 
-    
-
     def test_arg_width_zero(self):
+        """ if width is 0 """
         with self.assertRaises(ValueError):
             Rectangle(0, 8, 1)
 
     def test_arg_height_less(self):
+        """ test if height lss than 0 """
         with self.assertRaises(ValueError):
             Rectangle(2, -1, 1)
 
-    def test_arg_x_str(self):
+    def test_arg_x_less(self):
+        """ test if x less then 0 """
         with self.assertRaises(ValueError):
             Rectangle(2, 8, -8)
 
-    def test_arg_y_str(self):
+    def test_arg_y_less(self):
+        """ test if y is less then 0 """
         with self.assertRaises(ValueError):
             Rectangle(8, 8, 1, -8)
+
     def test_inst_base(self):
+        """ test if inst of bas """
         self.assertIsInstance(Rectangle(2, 10), Base)
-    def test_air(self):
+
+    def test_area(self):
+        """ test area """
         r2 = Rectangle(2, 10)
         self.assertEqual(r2.area(), 20)
+
+    if __name__ == '__main__':
+    unittest.main()
