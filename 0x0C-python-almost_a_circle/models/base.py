@@ -3,6 +3,7 @@
 Define Base class
 """
 import json
+import os.path
 
 
 class Base:
@@ -53,7 +54,7 @@ class Base:
         if json_string is None:
             return []
         return json.loads(json_string)
-    
+
     @classmethod
     def create(cls, **dictionary):
         """ returns an instance with all attributes already set """
@@ -64,3 +65,12 @@ class Base:
         new_class.update(**dictionary)
         return new_class
 
+    @classmethod
+    def load_from_file(cls):
+        """ returns a list of instances """
+        filename = str(cls.__name__) + ".json"
+        if os.path.isfile(filename) is False:
+            return []
+        with open(filename, mode="r", encoding="utf-8") as f:
+            content = Base.from_json_string(f.read())
+            return [cls.create(**dictin) for dictin in content]
