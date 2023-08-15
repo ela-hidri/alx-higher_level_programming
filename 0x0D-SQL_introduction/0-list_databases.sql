@@ -1,2 +1,2 @@
-# show oll databeses
-SHOW databases
+-- show oll databeses
+SHOW databases;
