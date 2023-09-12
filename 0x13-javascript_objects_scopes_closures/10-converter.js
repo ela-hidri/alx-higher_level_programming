@@ -1,10 +1,4 @@
 #!/usr/bin/node
-let b;
 exports.converter = function (base) {
-  b = base;
-  return convert;
+  return arr => arr.toString(base);
 };
-
-function convert (arr) {
-  return arr.toString(b);
-}
