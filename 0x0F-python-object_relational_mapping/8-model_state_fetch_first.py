@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-lists all State objects from the database
+lists first State object from the database
 """
 
 if __name__ == '__main__':
@@ -15,7 +15,6 @@ if __name__ == '__main__':
     Base.metadata.create_all(engine)
 
     session = Session(engine)
-    state = session.query(State).order_by(State.id).all()
-    if len(state) > 0:
-        print("{}: {}".format(state[0].id, state[0].name))
+    state = session.query(State).order_by(State.id).first()
+    print("{}: {}".format(state.id, state.name))
     session.close()
