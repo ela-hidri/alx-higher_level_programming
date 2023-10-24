@@ -8,6 +8,7 @@ request('https://swapi-api.alx-tools.com/api/films/' + argv[2], function (error,
       const name = JSON.parse(body).name;
       console.log(name);
       if (error) {
+
         console.error(error);
       }
     });
